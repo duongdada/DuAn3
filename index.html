@@ -4,38 +4,70 @@
     <meta charset="UTF-8" />
     <title>Contact Form</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        background: #f2f2f2;
-        padding: 30px;
+      * {
+        box-sizing: border-box;
       }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to right, #74ebd5, #9face6);
+        margin: 0;
+        padding: 40px;
+      }
+
       .container {
         background: white;
-        padding: 20px;
-        max-width: 400px;
+        padding: 30px;
+        max-width: 450px;
         margin: auto;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
       }
+
+      h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
       input,
-      textarea,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+      }
+
+      input:focus,
+      textarea:focus {
+        border-color: #7dcefc;
+        outline: none;
+        box-shadow: 0 0 5px rgba(125, 206, 252, 0.5);
+      }
+
       button {
         width: 100%;
-        padding: 10px;
-        margin-top: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
-      button {
+        padding: 12px;
         background-color: #4caf50;
         color: white;
         border: none;
+        border-radius: 6px;
+        font-size: 16px;
         cursor: pointer;
+        transition: background 0.3s;
       }
+
       button:hover {
         background-color: #45a049;
       }
-      h2 {
+
+      .footer-note {
+        margin-top: 15px;
+        font-size: 13px;
+        color: #555;
         text-align: center;
       }
     </style>
@@ -44,11 +76,12 @@
     <div class="container">
       <h2>Contact Us</h2>
       <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send</button>
+        <input type="text" placeholder="Your Full Name" required />
+        <input type="email" placeholder="Your Email Address" required />
+        <textarea placeholder="Your Message..." rows="5" required></textarea>
+        <button type="submit">Send Message</button>
       </form>
+      <div class="footer-note">* We will get back to you within 24 hours.</div>
     </div>
   </body>
 </html>
